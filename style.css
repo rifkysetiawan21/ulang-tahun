@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+
+  /* Bingkai gradient */
+  border: 10px solid transparent;
+  border-image: linear-gradient(45deg, #ffb6c9, #ffd6e3, #ffc1d6);
+  border-image-slice: 1;
+
+  box-sizing: border-box;
+  background-color: #ffe6ec;  /* warna dasar halaman */
+}
+
+
+
+/* Halaman PIN */
+.pin-page {
+  background-color: #ffe6ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+h2 {
+  color: #d63384;
+  margin-bottom: 15px;
+}
+
+input {
+  padding: 10px;
+  border: 2px solid #d63384;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 16px;
+  outline: none;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #d63384;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #b82c6e;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Halaman Ucapan */
+.birthday-page {
+  min-height: 100vh; /* ganti height ke min-height */
+  background-color: #ffe6ec;
+  color: #b82c6e;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  animation: fadeIn 2s ease-in;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+
+  input, button {
+    width: 80%;
+  }
+}
+.galeri {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  justify-items: center;
+  padding: 0 20px;
+}
+
+.galeri img {
+  width: 100%;
+  height: auto;
+  max-width: 180px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: contain;  /* biar tidak terpotong */
+  background-color: #fff; /* opsional, kasih latar belakang putih */
+  padding: 5px; /* kasih jarak biar rapi */
+}
+
+
+.galeri img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+.watermark {
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  font-size: 14px;
+  color: rgba(214, 51, 132, 0.6); /* pink lembut transparan */
+  font-family: 'Dancing Script', cursive;
+  pointer-events: none; /* biar gak bisa diklik */
+  user-select: none;    /* biar gak bisa diseleksi */
+}
+/* Tombol buka kado */
+#bukaKado {
+  margin-top: 25px;
+  background-color: #ff7eb9;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  padding: 12px 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#bukaKado:hover {
+  background-color: #ff4f9b;
+}
+
+/* Pesan rahasia (disembunyikan dulu) */
+.pesan {
+  display: none;
+  margin-top: 25px;
+  font-size: 20px;
+  color: #b82c6e;
+  background-color: #fff0f6;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-in forwards;
+  line-height: 1.6;
+  white-space: pre-line; /* biar baris baru kebaca */
+}
+
